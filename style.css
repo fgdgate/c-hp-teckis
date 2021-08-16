@@ -1,0 +1,441 @@
+@charset "UTF-8";
+
+body{
+      font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  }
+  
+  /* aタグに対して文字を白に */
+  a{
+      color: white;
+  }
+  
+  /* aタグに対して下線を削除 */
+  a:hover{
+      text-decoration: none;
+  
+  }
+
+
+    /* common */
+
+    /* スマフォのサイズになった時にbr要素を無効にする */
+  .mobile-br{
+      display: none;
+  }
+
+  .common-small-title{
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #00abae;
+  }
+
+  .common-title{
+      text-align: center;
+      font-weight: 800;
+      -webkit-text-stroke-width: 1px;
+  }
+
+  .common-btn-area{
+      position: relative;
+  }
+
+  .common-btn{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%)translateX(-50%);
+      -webkit-transform: translateY(-50%)translateX(-50%);
+      margin: auto;
+      background: #303030;
+      font-weight: 800;
+      text-align: center;
+      width: 420px;
+      padding: 16px;
+  }
+
+
+
+  /* 
+  position:
+    static：初期値はこれ。指定することはほとんどない
+    relative：現在の位置を基準に相対的な位置を決める
+    absolute：親要素を基準に絶対的な位置を決める
+    fixed：画面のきまった位置に固定する 
+
+    z-index::
+    とは要素の重なり順を決めるプロパティ
+    「要素が重なるときに使うもの」と理解しておけば良い
+
+display:
+            block ⇒要素が横までいっぱいに広がり、縦に並んでいく
+            inline ⇒要素が平ぺったく横に並んでいく
+            *inlineはおもに文中の一部として使われます。
+            たとえば、テキストの装飾やリンクなどの要素に用いられる
+            *inlineの要素は、CSSで幅（width）と高さ（height）を指定することができません。
+            inline-block ⇒blockとinlineの中間(並びはinline,中身はblock)
+            flex   
+            none ⇒非表示になる
+        etc...
+    */
+
+    /* header */
+    .header{
+        position: fixed;
+        /* 上記とセットで使う(top.bottom.left.right) */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    .header-logo{
+        margin: auto 0;
+        margin-left: 30px;
+    }
+
+    .header-btn{
+        width: 320px;
+        text-align: center;
+        background: #303030;
+        position: relative;
+    }
+
+    .header-btn p{
+        font-weight: 600;
+        width: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%)translateX(-50%);
+        -webkit-transform: translateY(-50%)translateX(-50%);
+    }
+
+    /* fvシート */
+    .fv{
+        margin-top: 80px;
+    }
+
+    .fv-main{
+        /* message枠をimgの並びへ配置 */
+        display: flex;
+    }
+
+    /* 画像横幅枠を決める */
+    .fv-img{
+        width: 75%;
+    }
+
+    /* 画像横幅枠いっぱいへ調節 */
+    .fv-img img{
+        width: 100%;
+    }
+
+    .mobile-fv-img{
+        display: none;
+    }
+
+    /* relative：現在の位置を基準に相対的な位置を決める */
+    .fv-message{
+        position: relative;
+        width: 35%;
+        background: #00abae;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .fv-txt h2{
+        font-weight: 800;
+        font-size: 5rem;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    /* absolute：親要素を基準に絶対的な位置を決める */
+    .fv-txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%)translateX(-50%);
+        -webkit-transform:translateY(-50%)translateX(-50%);
+        margin: auto;
+    }
+
+    .fv-day{
+        font-size: 2rem;
+        font-weight: 800;
+        -webkit-text-stroke-width: 1px;
+}
+
+    .fv-time{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .fv-sub{
+        font-weight: 600;
+    }
+
+
+    /* about */
+    .about{
+        padding: 80px 10px;
+    }
+
+    .about-main{
+        display: flex;
+    }
+
+    .about-title{
+        font-weight: 800;
+        font-size: 2.5rem;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .about-message{
+        margin: 80px 0;
+        line-height: 2;
+    }
+
+    .about-img{
+        text-align: left;
+    }
+
+
+    /* facility */
+    .facility-icon{
+        text-align: center;
+        margin: 40px;
+    }
+
+    .mobile-facility-icon{
+        display: none;
+    }
+
+    .facility-icon img{
+        margin: 16px;
+    }
+
+    .facility-space{
+        text-align: center;
+        background: rgb(0, 171, 174, 0.1);
+        padding: 32px 0;
+    }
+
+
+    /* featuer */
+    .feature{
+        margin-top: 40px;
+    }
+
+    .feature-content{
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 72px;
+    }
+
+    .feature-content-title{
+        font-weight: 800;
+        margin: 24px 0px;
+    }
+
+    /* flow */
+    .flow{
+        padding: 160px 0;
+    }
+
+    /* .flow-main{
+    } */
+
+    .flow-attention{
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    /* .flow-content-title{
+        text-align: center;
+        margin: 16px 0;
+        font-weight: 800;
+    } */
+
+    /* .icon-area{
+        text-align: center;
+        margin-top: 16px;
+        height: 80px;
+        margin-bottom: 56px;
+    } */
+
+
+    /* price */
+    .price{
+        background: rgb(0, 171, 174, 0.1);
+        padding: 48px 0;
+        padding-bottom: 80px;
+    }
+
+    .price-img{
+        margin: 32px auto;
+        width: 56%;
+        text-align: center;
+    }
+
+    .table-price{
+        margin-bottom: 80px;
+        margin-top: 72px;
+    }
+
+    .table-price2{
+        margin-bottom: 100px;
+    }
+
+    .small-txt{
+        font-size: small;
+        font-weight: 100;
+    }
+
+    .price-message{
+        padding-bottom: 72px;
+        font-size: 12px;
+    }
+
+
+    /* map */
+    .map{
+        padding-top: 72px;
+    }
+
+    .map-message{
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .map-message p{
+        margin-bottom: 72px;
+    }
+
+    .map img{
+        padding-bottom: 90px;
+    }
+
+    
+    /* footer */
+    footer{
+        text-align: center;
+        position: relative;
+    }
+
+    footer img{
+        width: 100vw;
+    }
+
+    footer p{
+        color: white;
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateY(-50%)translateX(-50%);
+        -webkit-transform: translateY(-50%)translateX(-50%);
+        margin: auto;
+    }
+
+    /* レスポンシブ対応スタイル */
+    @media screen and (max-width: 1200px){
+        /* 消さない方がデザインとしていいかも */
+        /* .about-img{display: none;} */
+    }
+
+    @media screen and (max-width: 1024px){
+        /* header */
+        .header-logo{margin: auto;}
+
+        .header-btn{display: none;}
+
+        /* fv */
+        .fv-txt h2{font-size: 3rem;}
+
+        .fv-day{font-size: 1rem; margin: 0;}
+
+        .fv-time{font-size: 1.5rem; margin: 0;}
+
+        .fv-sub{margin: 0;}
+
+        /* about */
+        /* .about{padding-bottom: 0;} ※写真をNoneの場合 */
+        .about{padding: auto;}
+        /* .about-res-img{display: none;} */
+    }
+
+
+    @media screen and (max-width: 480px){
+        /* common */
+        .common-btn{width: 320px;}
+        /* .about-img{display: none;} */
+        .mobile-br{display: block;}
+
+        /* fv */
+        .fv-img{display: none;}
+
+        .mobile-fv-img{display: block; width: 50%;}
+
+        .mobile-fv-img img{width: 100%;}
+
+        .fv-message{width: 50%;}
+
+        .fv-txt h2{font-size: 2rem;}
+
+        .fv-day{font-size: 1rem; margin: 0;}
+
+        .fv-time{font-size: 1rem; margin: 0;}
+
+        .fv-sub{font-size: 8px; margin: 0;}
+
+        /* about */
+        .about{padding: 40px 0;}
+
+        .about-title{font-size: 24px;}
+
+        .about-message{margin: 40px 0;}
+
+        /* facility */
+        .facility-icon{display: none;}
+
+        .mobile-facility-icon{margin: 16px; text-align: center; display: block;}
+
+        /* flow */
+        .flow{padding: 80px 0;}
+
+        /* price */
+        .price{margin-bottom: 72px;}
+
+        .price-img{width: 100%;}
+
+        .table-price{margin-bottom: 72px;}
+
+        /* map */
+        .map{padding-top: 0;}
+
+        /* .map-message p{padding-bottom: 44px;} */
+
+        .map img{padding-bottom: 44px;}
+
+        /* feature */
+        .feature-content-message{text-align: left;}
+        .feature-content p{text-align: left;}
+    }
+
+
+    @media screen and (max-width: 320px){
+        /* common */
+        .common-btn{width: 240px;}
+
+        /* about */
+        .about-title{font-size: 20px;}
+        .about-img{display: none;}
+
+        /* feature */
+        .feature-content-message{text-align: left;}
+        .feature-content p{text-align: left;}
+    }    
