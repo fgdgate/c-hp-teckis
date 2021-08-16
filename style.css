@@ -25,7 +25,7 @@ body{
 
   .common-small-title{
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 600;
       color: #00abae;
   }
@@ -52,6 +52,9 @@ body{
       text-align: center;
       width: 420px;
       padding: 16px;
+
+      /* boxシャドウ追加 */
+      box-shadow: 5px 5px #00abae;
   }
 
 
@@ -183,6 +186,10 @@ display:
     /* about */
     .about{
         padding: 80px 10px;
+        /* グラデーション追加 */
+        background: -moz-linear-gradient(top, #FFF, #b6feff, #FFF);
+        background: -webkit-linear-gradient(top, #FFF, #b6feff, #FFF);
+        background: linear-gradient(to bottom, #FFF, #b6feff, #FFF);
     }
 
     .about-main{
@@ -221,7 +228,12 @@ display:
 
     .facility-space{
         text-align: center;
-        background: rgb(0, 171, 174, 0.1);
+        /* background: rgb(0, 171, 174, 0.1); */
+
+        /* グラデーション追加 */
+        background: -moz-linear-gradient(top, #FFF, #b6feff, #FFF);
+        background: -webkit-linear-gradient(top, #FFF, #b6feff, #FFF);
+        background: linear-gradient(to bottom, #FFF, #b6feff, #FFF);
         padding: 32px 0;
     }
 
@@ -271,7 +283,12 @@ display:
 
     /* price */
     .price{
-        background: rgb(0, 171, 174, 0.1);
+        /* background: rgb(0, 171, 174, 0.1); */
+
+        /* グラデーション追加 */
+        background: -moz-linear-gradient(top, #FFF, #b6feff, #FFF);
+        background: -webkit-linear-gradient(top, #FFF, #b6feff, #FFF);
+        background: linear-gradient(to bottom, #FFF, #b6feff, #FFF);
         padding: 48px 0;
         padding-bottom: 80px;
     }
